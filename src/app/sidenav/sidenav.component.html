@@ -1,0 +1,33 @@
+<div class="side-nav">
+  <div class="top">
+    <div class="logo p-2 text-center">Logo</div>
+    <!-- <div class="cross">
+      <i class="fa-sharp fa-solid fa-x" (click)="closeEventMenu()"></i>
+    </div> -->
+  </div>
+  <div class="body px-3 pt-2">
+    <div class="quote mb-3 border-bottom">
+      <p class="mb-2"><em>"Success is not final, failure is not fatal: It is the courage to continue that counts."</em>
+      </p>
+      <p class="text-end">- Winston Churchill</p>
+    </div>
+    <div class="events mb-3 border-bottom py-2">
+      <div class="addevent d-flex flex-column">
+        <p class="text-center fw-bold fs-5">Add a new Event</p>
+        <button class="btn btn-success fs-3 mb-3" (click)="navigateToAddEventPage()">+</button>
+      </div>
+    </div>
+    <div class="eventList">
+      <div class="d-flex align-items-baseline">
+        <h3>Events</h3><span>({{selectedDate}})</span>
+      </div>
+      <p *ngIf="eventList.length === 0">No Events Added</p>
+      <ul>
+        <li *ngFor="let event of eventList[0]?.events">
+          <h5 class="m-0">{{event.title}}</h5>
+          <p class="event-description"><em>{{event.description}}</em></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

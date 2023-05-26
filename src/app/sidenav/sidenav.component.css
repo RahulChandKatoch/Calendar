@@ -1,0 +1,33 @@
+.side-nav{
+  height:100%;
+  width:100%;
+  position:relative;
+  box-shadow:5px 0px 13px rgb(230,230,230);
+  /* overflow-y: scroll; */
+}
+.cross{
+  position:absolute;
+  top:5px;
+  right:10px;
+  border-radius:100%;
+  font-size:1.2em;
+}
+.cross:hover{
+  cursor:pointer
+}
+.top{
+  background-color: black;
+  height:100px;
+  color:white;
+}
+.logo{
+  font-size:3em;
+  font-weight:600;
+}
+.event-description{
+  text-overflow:ellipsis;
+}
+/* ul{
+  height:427px;
+  overflow-y:scroll;
+} */

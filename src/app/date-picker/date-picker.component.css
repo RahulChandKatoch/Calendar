@@ -1,0 +1,176 @@
+.input-container,form{
+  position:relative;
+}
+i{
+  position:absolute;
+  right:15%;
+  top:24%;
+}
+input{
+  user-select: none;
+}
+.pop-up{
+  height:20vw;
+  width:20vw;
+  position:absolute;
+  left:5vw;
+  top:1vw;
+  background:#fff;
+  border-radius:7px;
+  overflow:hidden;
+}
+.popup-header{
+  background-color:rgb(16, 40, 221);
+  padding:10px;
+  display:flex;
+  justify-content:center;
+}
+.popup-header span{
+  color:white;
+  font-size: 1vw;
+  height:3vw;
+}
+.one-twelve{
+  height:250px;
+  width:250px;
+  border-radius:50%;
+  position: absolute;
+  top:85px;
+  left:52px;
+  background-color:rgba(0,0,0,0.1);
+}
+.thirteen-twentyfour{
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  position: absolute;
+  top:110px;
+  left:76px;
+}
+.one-twelve>span, .thirteen-twentyfour>span{
+  position:absolute;
+}
+.hour-1{
+  top:21px;
+  left:173px;
+}
+.hour-2{
+  top:62px;
+  left:212px;
+}
+.hour-3{
+  top:115px;
+  left:227px;
+}
+.hour-4{
+  top:172px;
+  left:211px;
+}
+.hour-5{
+  top:211px;
+  left:173px;
+}
+.hour-6{
+  top:227px;
+  left:117px;
+}
+.hour-7{
+  top:209px;
+  left:61px;
+}
+.hour-8{
+  top:170px;
+  left:18px;
+}
+.hour-9{
+  top:115px;
+  left:3px;
+}
+.hour-10{
+  top:58px;
+  left:18px;
+}
+.hour-11{
+  top:16px;
+  left:57px;
+}
+.hour-12{
+  top:0px;
+  left:117px;
+}
+.large{
+  height:100px;
+  width:0;
+  border:1px solid blue;
+  position:absolute;
+  top:110px;
+  left:176px;
+  transform-origin: bottom;
+  transform:rotate(0deg);
+  transition:transform linear 0.5s;
+}
+.hour-13{
+  top:19px;
+  left:133px;
+}
+.hour-14{
+  top:48px;
+  left:162px;
+}
+.hour-15{
+  top:90px;
+  left:173px;
+}
+.hour-16{
+  top:130px;
+  left:160px;
+}
+.hour-17{
+  top:164px;
+  left:135px;
+}
+.hour-18{
+  top:175px;
+  left:94px;
+}
+.hour-19{
+  top:161px;
+  left:52px;
+}
+.hour-20{
+  top:135px;
+  left:15px;
+}
+.hour-21{
+  top:89px;
+  left:3px;
+}
+.hour-22{
+  top:44px;
+  left:15px;
+}
+.hour-23{
+  top:13px;
+  left:46px;
+}
+.hour-24{
+  top:0px;
+  left:92px;
+}
+.short{
+  height:75px;
+  width:0;
+  border:1px solid blue;
+  position:absolute;
+  top:135px;
+  left:176px;
+  transform-origin: bottom;
+  transform:rotate(0deg);
+  transition:transform linear 0.5s;
+}
+.hours span:hover{
+  cursor:pointer;
+}
+i:hover{
+  cursor:pointer;
+}

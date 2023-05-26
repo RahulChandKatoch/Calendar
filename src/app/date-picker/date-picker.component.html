@@ -1,0 +1,42 @@
+<div class="pt-5"
+  style="height:100vh;width:100vw;display:flex;justify-content: center;background-color: rgba(0,0,0,0.1);">
+  <form [formGroup]="date">
+    <div class="d-flex input-container">
+      <input type="date" style="width:200px;padding:5px;"
+        formControlName="input" (change)="inputChange()"><i class="fa-regular fa-clock fs-5" (click)="showPopup = !showPopup"></i>
+    </div>
+    <div *ngIf="showPopup" class="pop-up">
+      <div (blur)="showPopup = !showPopup">
+        <div class="popup-header">
+          <p><span>{{hours}}</span><span>:</span><span>{{minutes}}</span></p>
+        </div>
+        <div class="popup-body">
+          <div class="calender"></div>
+          <div class="watch">
+            <div class="hours">
+              <div class="one-twelve">
+                <span *ngFor="let hours of hoursOuter;let i=index;" class="hour-{{i+1}}"
+                  (click)="hourClicked(i+1,'long',hours)">
+                  <span *ngIf="!showMinute">{{hours}}</span>
+                </span>
+                <span *ngFor="let minutes of minutesArr;let i=index;" class="hour-{{i+1}}"
+                  (click)="minuteClicked(i+1,minutes)">
+                  <span *ngIf="showMinute">{{minutes}}</span>
+                </span>
+              </div>
+              <div class="thirteen-twentyfour">
+                <span *ngFor="let hours of hoursInner;let i=index;" class="hour-{{i+13}}"
+                  (click)="hourClicked(i+1,'short',hours)">
+                  <span *ngIf="!showMinute">{{hours}}</span>
+                </span>
+              </div>
+            </div>
+            <div class="hand">
+              <div [ngClass]="{'large':!short,'short':short}" [ngStyle]="{'transform':'rotate('+deg+'deg)'}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="d-flex justify-content-center" style="height:89vh;">
+        <div class="calendar">
+          <div class="calendar-header d-flex align-items-center justify-content-between px-3 py-2 mb-2">
+            <p class="d-flex align-items-center m-0">
+              <span class="me-2"><i class="fa-solid fa-caret-left" [ngClass]="{'disabledDate':selectedMonth < 1}"
+                  (click)="changeMonth('-1')"></i></span>
+              <span class="me-2" style="user-select:none;">{{selectedMonthName}}, {{selectedYear}}</span>
+              <span class="me-2"><i class="fa-solid fa-caret-right" [ngClass]="{'disabledDate':selectedMonth > 10}"
+                  (click)="changeMonth('+1')"></i></span>
+            </p>
+            <div class="form-group" style="width:20%;">
+              <select class="form-select" (change)="selectYear($event)">
+                <option *ngFor="let year of years" [value]="year" [selected]="year === currYear">{{year}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="calendar-body">
+            <div class="grid-box">
+              <div class="days" *ngFor="let day of days">
+                <p class="m-0" *ngIf="day!='' && day">{{day}}</p>
+              </div>
+              <div class="dates" *ngFor="let date of dateArr; let i=index;" [ngClass]="{'disabledDate':i < indexof1 || i > indexOfLastMonth,'selected':selected === i && date == selectedDate}"
+                (click)="openEventMenu(i,date)">
+                <p class="m-0">
+                  {{date}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

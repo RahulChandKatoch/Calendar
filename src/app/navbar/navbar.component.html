@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col p-0">
+      <nav class="d-flex justify-content-between py-2 px-3 align-items-center">
+        <ul class="d-flex p-0 align-items-center">
+          <li class="ms-3">
+            <a>Dashboard</a>
+          </li>
+          <li class="ms-3">
+            <a routerLink="" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">Calendar</a>
+          </li>
+          <li class="ms-3">
+            <a routerLink="add-events" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">Add Events</a>
+          </li>
+        </ul>
+        <ul class="d-flex align-items-center">
+          <li class="me-4">
+            <a routerLink="notifications" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-regular fa-bell"></i>
+            </a>
+          </li>
+          <li class="me-4">
+            <a routerLink="options" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-solid fa-list"></i>
+            </a>
+          </li>
+          <li class="me-4">
+            <a routerLink="messages" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-regular fa-envelope-open"></i>
+            </a>
+          </li>
+          <li class="me-2">
+            <a routerLink="profile" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">
+              <img src="../../assets/user.png" alt="" height="30" width="30" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row" style="flex-wrap:nowrap">
+    <div class="column-2">
+     <app-sidenav></app-sidenav>
+    </div>
+    <div style="height:100vh;" class="content p-3 column-8">
+      <router-outlet />
+    </div>
+  </div>
+</div>

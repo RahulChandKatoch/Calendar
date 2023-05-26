@@ -1,0 +1,44 @@
+nav ul li{
+  list-style:none;
+}
+nav{
+  box-shadow:0px 5px 13px rgb(230,230,230);
+}
+a{
+  text-decoration:none;
+  font-size:0.88vw;
+  color:rgba(0,0,0,0.5);
+  font-weight:400;
+}
+.activeLink{
+  font-size:1vw;
+  color:rgba(0,0,0,0.8);
+  font-weight:500;
+}
+.bars:hover{
+  cursor:pointer;
+}
+.bars{
+  font-size:1vw;
+}
+.content{
+  background-color:rgba(0,0,0,0.1);
+}
+.column-0{
+  width:0%;
+  overflow:hidden;
+  padding:0;
+}
+.column-2{
+  width:20%;
+  overflow:hidden;
+  padding:0;
+}
+.column-8{
+  width:80%;
+  overflow:hidden;
+}
+.column-10{
+  width:100%;
+  overflow:hidden;
+}

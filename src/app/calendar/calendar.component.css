@@ -1,0 +1,36 @@
+.calendar{
+  width:50vw;
+  height:500px;
+}
+.calendar-header{
+  width:100%;
+  height:auto;
+  background-color:#fff;
+}
+.calendar-header span:hover{
+  cursor:pointer;
+}
+.grid-box{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap:2px;
+}
+.grid-box div{
+  background-color:#fff;
+  height:90px;
+  display:grid;
+  place-items: center;
+}
+.dates{
+  cursor:pointer;
+}
+.disabledDate{
+  color:rgba(0,0,0,0.9);
+  background-color:rgba(0,0,0,0.1) !important;
+  user-select:none;
+  opacity:0.6;
+  cursor:not-allowed;
+}
+.selected{
+  box-shadow:inset 0px 0px 30px rgb(7, 7, 197);
+}
